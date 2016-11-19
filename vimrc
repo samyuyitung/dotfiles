@@ -1,9 +1,6 @@
 set nocompatible
 
 " remappings
-	" leader key
-		let mapleader = "'"
-
 	" unmap the arrow keys
 		noremap <Up> <Nop>
 		noremap <Down> <Nop>
@@ -19,6 +16,7 @@ set nocompatible
 
 	" set enter to new line
 		nmap <Enter> o<Esc>
+		nmap<S-Enter> O<Esc>
 
 	" add indent funtionality to the tab keys
 		noremap <Tab> >><esc>
@@ -75,3 +73,7 @@ set nocompatible
 		set ignorecase          " ignorecase for search
 		set smartcase           " case sensitive if at least one is capitalized
 		set incsearch           " do incremental searching
+
+	" Allow searching through full directory
+		set path+=**
+		set wildmenu
