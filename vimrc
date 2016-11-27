@@ -68,6 +68,7 @@ set nocompatible
 	" copy / paste settings
 		set pastetoggle=<f10>
 		set clipboard=unnamed
+		noremap p "0p
 
 	" search settings
 		set ignorecase          " ignorecase for search

@@ -6,7 +6,6 @@ alias got='git'
 alias work="cd ~/code"
 
 eval $(thefuck --alias)
-eval $(docker-machine env default)
 
 mkcd () {
 	mkdir "$1"
