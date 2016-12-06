@@ -1,6 +1,10 @@
 set nocompatible
 
 " remappings
+
+	" Remap the leader
+		let mapleader=','
+
 	" unmap the arrow keys
 		noremap <Up> <Nop>
 		noremap <Down> <Nop>
@@ -22,14 +26,17 @@ set nocompatible
 		noremap <Tab> >><esc>
 		noremap <S-Tab> <<<esc>
 
-	"set space to insert mode plus space
+	" set space to insert mode plus space
 		nmap <Space> a
 
 	" 'q' is save quit in normal mode
 		nmap q ZZ
 
-	"remove all trailing whitespace
+	" remove all trailing whitespace
 		nnoremap <Leader>rm :%s/\s\+$//e<CR>
+
+	" Make the backspace work again (OSX only?)
+		set bs=2
 
 " settings
 	" tab spaces
@@ -68,7 +75,6 @@ set nocompatible
 	" copy / paste settings
 		set pastetoggle=<f10>
 		set clipboard=unnamed
-		noremap p "0p
 
 	" search settings
 		set ignorecase          " ignorecase for search
