@@ -5,7 +5,7 @@ alias zrc='vim ~/.zshrc && source ~/.zshrc'
 alias gitcon='vim ~/Documents/dotfiles/gitalias'
 alias got='git'
 alias work="cd ~/code"
-
+alias batt="pmset -g batt"
 eval $(thefuck --alias)
 
 mkcd () {
