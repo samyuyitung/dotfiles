@@ -1,0 +1,28 @@
+This is a list of all the extra things for my setup
+
+Terminal: iTerm2
+iTerm Theme: solarized dark (preferences > profiles > colors > presets)
+
+Shell: zsh
+ZSH Theme: geoffgarside
+
+Text editor (when not vim)
+- Sublime text 3
+
+Brew packages:
+- node
+- vim
+- tmux
+- grip
+- thefuck
+- cask
+- ngrok (cask)
+
+Node packages
+- yarn
+- express
+- tldr
+
+Gems
+- Bropages
+- Sass

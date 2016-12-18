@@ -1,3 +1,6 @@
+ZSH_THEME="geoffgarside"
+
+
 alias chrome="open -a /Applications/Google\ Chrome.app"
 alias x="exit"
 alias vrc='vim ~/Documents/dotfiles/vimrc'
