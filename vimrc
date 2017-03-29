@@ -137,8 +137,8 @@ syntax on
 		filetype indent on
 
 	" backup settings
-		set backup
-		set backupdir=~/.vimBackup
+		" set backup
+		" set backupdir=~/.vimBackup
 		set noswapfile
 
 	" folding

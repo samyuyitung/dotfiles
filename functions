@@ -1,0 +1,13 @@
+#
+# This is a list of custom functions for my shell rc
+# These should work with bash and zsh
+#
+
+mkcd () {
+	mkdir "$1"
+	cd "$1"
+}
+
+weather() {
+	curl -k "http://wttr.in/${1:=toronto}"
+}
