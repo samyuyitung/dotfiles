@@ -11,3 +11,11 @@ mkcd () {
 weather() {
 	curl -k "http://wttr.in/${1:=toronto}"
 }
+
+dos () {
+	sed 's/^M$//' "$1"
+}
+
+unix () {
+	sed 's/$/^M/' "$1"
+}

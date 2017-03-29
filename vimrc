@@ -60,8 +60,6 @@ syntax on
 		let g:syntastic_cpp_compiler = 'clang++'
 		let g:syntastic_cpp_compiler_options = ' -std=c++11 -stdlib=libc++'
 		let g:syntastic_css_checkers = ['csslint']
-		let g:syntastic_mode_map = { 'passive_filetypes': ['java']  }
-		" disables syntastic for java because I have eclim
 
 	" vertical line indentation
 		let g:indentLine_color_term = 239
@@ -90,8 +88,9 @@ syntax on
 		noremap B ^
 		noremap E $
 
-	" allow jk to exit insert mode
+	" allow jk to exit insert and visual mode
 		inoremap jk <Esc>
+		vnoremap jk <Esc>
 
 	" set enter to new line
 		nmap <Enter> o<Esc>
