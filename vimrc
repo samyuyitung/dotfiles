@@ -15,7 +15,6 @@ Plugin 'VundleVim/Vundle.vim'
 		Plugin 'scrooloose/nerdcommenter'               " ezpz comments
 		Plugin 'scrooloose/syntastic'                   " compiler-esque
 		Plugin 'scrooloose/nerdtree'                    " blessed tree
-		Plugin 'jeffkreeftmeijer/vim-numbertoggle'      " toggleline numbers
 		Plugin 'ajh17/VimCompletesMe'                   " autocomplete
 		Plugin 'easymotion/vim-easymotion'
 		Plugin 'rking/ag.vim'                           " silver search
@@ -32,19 +31,19 @@ call vundle#end()
 
 filetype plugin indent on
 syntax on
+" Remap the leader key
+	let mapleader=','
 
 " Plugin Settings
-	" Easymotion
-		" s{char}{char} to move to {char}{char}
-		nmap s <Plug>(easymotion-overwin-f2)
-		" Move to line
-		map <Leader>L <Plug>(easymotion-bd-jk)
-		nmap L <Plug>(easymotion-overwin-line)
-
 	" NerdTree
 		let NERDTreeShowLineNumbers=1
 		autocmd FileType nerdtree setlocal relativenumber
-		nnoremap n :NERDTreeToggle<CR>
+		nmap <leader>n :NERDTreeToggle<CR>
+
+		nnoremap <C-h> <C-w>h
+		nnoremap <C-j> <C-w>j
+		nnoremap <C-k> <C-w>k
+		nnoremap <C-l> <C-w>l
 
 	" Syntastic
 		set statusline+=%#warningmsg#
@@ -63,7 +62,7 @@ syntax on
 
 	" vertical line indentation
 		let g:indentLine_color_term = 239
-		let g:indentLine_color_gui = '#A5E57E'
+"		let g:indentLine_color_gui = '#A5E57E'
 		let g:indentLine_char = '¦'
 
 	" You Complete me
@@ -76,7 +75,7 @@ syntax on
 " remappings
 
 	" Remap the leader
-		let mapleader=','
+
 
 	" unmap the arrow keys
 		noremap <Up> <Nop>
@@ -94,17 +93,17 @@ syntax on
 
 	" set enter to new line
 		nmap <Enter> o<Esc>
-		nmap<S-Enter> O<Esc>
+		nnoremap <S-Enter> O<Esc>
 
 	" add indent funtionality to the tab keys
 		noremap <Tab> >><esc>
 		noremap <S-Tab> <<<esc>
 
 	" set space to insert mode plus space
-		nmap <Space> a
+		nnoremap <Space> a
 
 	" 'q' is save quit in normal mode
-		nmap q ZZ
+		nnoremap q ZZ
 
 	" remove all trailing whitespace
 		nnoremap <Leader>rm :%s/\s\+$//e<CR>
