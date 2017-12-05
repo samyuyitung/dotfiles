@@ -1,12 +1,8 @@
 ZSH_THEME="geoffgarside"
 
-aliases="$(pwd)/alias"
-if [ -f "$aliases" ] && [ -r "$aliases" ]; then
-	source $aliases
-fi
+files="aliases functions"
 
-functions="$(pwd)/functions"
-
-if [ -f "$functions" ] && [ -r "$functions" ]; then
-	source $functions
-fi
+for file in $files; do
+	f="$(pwd)/${file}"
+	[ -r "$f" ] && source $f
+done

@@ -9,7 +9,7 @@ mkcd () {
 }
 
 weather() {
-	curl -k "http://wttr.in/${1:=toronto}"
+	curl -ks "http://wttr.in/${1:-toronto}"
 }
 
 dos () {
@@ -18,4 +18,12 @@ dos () {
 
 unix () {
 	sed 's/$/^M/' "$1"
+}
+
+pdf () {
+
+	for file in *.md; do
+		local filename="$(echo "$file" | cut -d "." -f 1)"
+		pandoc $file -o out/${filename}.pdf
+	done
 }
