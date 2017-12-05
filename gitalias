@@ -11,3 +11,5 @@
 	d = diff --word-diff
 	unstage = reset head
 	amend = commit --amend --reuse-message=HEAD
+	up = "!git fetch --prune && git pull origin $(git rev-parse --abbrev-ref HEAD)"
+	m = "!git merge --no-ff -m "merge branch $1" $1"
