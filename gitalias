@@ -1,15 +1,9 @@
 [alias]
-	st = status
-	cm = commit -m
-	co = checkout
-	cob = checkout -b
 	l = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all
 	ls = log --pretty=format:"%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --date=relative
 	ll = log --pretty=format:\"%C(yellow)%h%Cred%d\\\\ %Creset%s%Cblue\\\\ [%cn]\" --decorate --numstat --date=relative
+	find = log --pretty=\"format:%Cgreen%H %Cblue%s\" --name-status --grep
 	sf = diff-tree --no-commit-id --name-only -r
-	dl = diff HEAD~..HEAD
-	d = diff --word-diff
-	unstage = reset head
 	amend = commit --amend --reuse-message=HEAD
-	up = "!git fetch --prune && git pull origin $(git rev-parse --abbrev-ref HEAD)"
 	m = "!git merge --no-ff -m "merge branch $1" $1"
+	pr = "!sh ~/scripts/pr.sh"

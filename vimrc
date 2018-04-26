@@ -8,9 +8,11 @@ call vundle#begin()
 	Plugin 'kien/ctrlp.vim'
 	Plugin 'scrooloose/nerdtree'
 call vundle#end()
-
 filetype plugin indent on
 syntax on
+
+" Remap the leader
+	let mapleader=','
 
 " Plugin Settings
 	" NerdTree
@@ -24,10 +26,6 @@ syntax on
 		nnoremap <C-l> <C-w>l
 
 " remappings
-
-	" Remap the leader
-		let mapleader=','
-
 	" unmap the arrow keys
 		noremap <Up> <Nop>
 		noremap <Down> <Nop>
@@ -55,6 +53,14 @@ syntax on
 	" Map :W to :w
 		:ca W w
 
+	" insert current ISO date
+		nnoremap <Leader>d "=strftime("%Y-%m-%d")<CR>P
+
+	" Insert name
+		nnoremap <Leader>n iSam Yuyitung<CR>
+
+	"insert title
+		nnoremap <Leader>t <Leader>d <Leader>n
 " settings
 	" tab spaces
 		set tabstop=4
